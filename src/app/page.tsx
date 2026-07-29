@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { Users, UserCheck, CalendarCheck, TrendingUp } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -110,7 +111,7 @@ export default function Home() {
               { time: '15:30', name: 'Laura Gómez', tag: 'Uso Personal' },
               { time: '17:00', name: 'Roberto Díaz', tag: 'Inversión' },
             ].map((apt, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border border-araya-beige hover:bg-araya-beige/50 transition-colors cursor-pointer">
+              <Link href="/leads" key={i} className="flex items-center gap-4 p-4 rounded-xl border border-araya-beige hover:bg-araya-beige/50 transition-colors cursor-pointer">
                 <div className="bg-araya-accent/10 text-araya-accent font-bold px-3 py-2 rounded-lg text-sm">
                   {apt.time}
                 </div>
@@ -118,13 +119,13 @@ export default function Home() {
                   <p className="font-semibold text-araya-brown">{apt.name}</p>
                   <p className="text-xs text-araya-brown/60 mt-1">{apt.tag}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
-          <button className="w-full mt-6 py-3 rounded-xl bg-araya-beige text-araya-brown font-medium hover:bg-araya-brown hover:text-white transition-colors">
+          <Link href="/calendar" className="block w-full mt-6 py-3 rounded-xl bg-araya-beige text-araya-brown font-medium text-center hover:bg-araya-brown hover:text-white transition-colors">
             Ver Calendario Completo
-          </button>
+          </Link>
         </div>
       </div>
     </div>
