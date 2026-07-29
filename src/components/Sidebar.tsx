@@ -14,9 +14,8 @@ export default function Sidebar() {
 
   return (
     <div className="w-64 h-screen bg-araya-beige text-araya-brown flex flex-col border-r border-araya-brown/20 fixed">
-      <div className="p-6">
-        <h1 className="text-2xl font-bold tracking-tight text-araya-brown">Willvin<span className="text-araya-accent">.</span></h1>
-        <p className="text-sm opacity-70">Araya Punta Cana</p>
+      <div className="p-6 flex items-center">
+        <img src="/logo.png" alt="Willvin Punta Cana Logo" className="h-10 w-auto object-contain" />
       </div>
 
       <nav className="flex-1 px-4 space-y-2 mt-4">
