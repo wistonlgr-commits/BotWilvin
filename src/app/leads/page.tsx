@@ -160,11 +160,11 @@ export default function LeadsPage() {
               <div className="space-y-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-araya-brown/50">Acciones</h3>
                 <div className="flex gap-2">
-                  <a href={`https://wa.me/${selectedLead.phone.replace(/[^0-9]/g, '')}`} target="_blank" rel="noreferrer" className="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white py-2 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors">
+                  <a href={`https://wa.me/${(selectedLead.phone || '').replace(/[^0-9]/g, '')}`} target="_blank" rel="noreferrer" className="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white py-2 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors">
                     <MessageSquare className="w-4 h-4" />
                     WhatsApp
                   </a>
-                  <a href={`tel:${selectedLead.phone}`} className="flex-1 bg-araya-brown hover:bg-araya-brown/90 text-white py-2 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors">
+                  <a href={`tel:${selectedLead.phone || ''}`} className="flex-1 bg-araya-brown hover:bg-araya-brown/90 text-white py-2 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition-colors">
                     <Phone className="w-4 h-4" />
                     Llamar
                   </a>
